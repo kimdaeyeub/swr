@@ -6,7 +6,7 @@ const semver = require('semver')
 const packageJsonPath = path.join(__dirname, '../package.json')
 const packageJsonData = fs.readFileSync(packageJsonPath, 'utf8')
 const packageJson = JSON.parse(packageJsonData)
-
+console.log('Current version:', packageJson.version)
 let version = packageJson.version
 const releaseType = process.env.RELEASE_TYPE || 'beta'
 const semverType = process.env.SEMVER_TYPE
